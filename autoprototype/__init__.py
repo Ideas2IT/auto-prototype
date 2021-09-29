@@ -1,2 +1,2 @@
-from sklearnopt import *
-from tfkerasopt import *
+from autoprototype.sklearnopt import *
+from autoprototype.tfkerasopt import *

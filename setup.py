@@ -13,7 +13,7 @@ def make_required_install_packages():
     ]
 setuptools.setup(
     name="autoprototype",
-    version="0.0",
+    version="0.1",
     author="Ankan Ghosh",
     author_email = "ankan@ideas2it.com",
     description=" This is a module for Hyper-parameter tuning and rapid prototyping",
