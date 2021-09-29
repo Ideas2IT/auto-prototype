@@ -1,13 +1,10 @@
 import urllib
-import keras
 import optuna
 from optuna.integration import TFKerasPruningCallback
 from optuna.trial import TrialState
-import tensorflow_datasets as tfds
 from tensorflow.keras.optimizers import RMSprop, Adam , SGD
 import tensorflow as tf
 from typing import Optional
-from keras.layers import Dense, Activation, Flatten, Conv2D, MaxPool2D, Dropout, BatchNormalization
 
 # TODO(crcrpar): Remove the below three lines once everything is ok.
 # Register a global custom opener to avoid HTTP Error 403: Forbidden when downloading MNIST.
@@ -26,8 +23,8 @@ VALIDATION_STEPS = 30
 class KerasHPO():
     def __init__(self, train,
                  target,
-                 EPOCHS: Optional[int] = 5,
                  classes,
+                 EPOCHS: Optional[int] = 5,
                  steps_per_epoch : Optional[int] = 216,
                  loss: Optional[str] = "sparse_categorical_crossentropy",
                  max_nconv : Optional[int] = 5,
@@ -69,7 +66,7 @@ class KerasHPO():
         model.compile(
             loss=self.loss,
             optimizer=optimizer_name(lr=lr),
-            metrics=["val_loss"],
+            metrics=["accuracy"],
         )
 
         return model
@@ -92,7 +89,7 @@ class KerasHPO():
                 input_shape=self.input_shape,
             )
         )
-        model.add(BatchNormalization(axis=3))
+        model.add(tf.keras.layers.BatchNormalization(axis=3))
         for i in range(nconv):
 
             model.add(
@@ -156,6 +153,7 @@ class KerasHPO():
                             epochs=self.EPOCHS,
                             verbose=True,
                             validation_split=0.2)
+        print(monitor)
 
         return history.history[monitor][-1]
 

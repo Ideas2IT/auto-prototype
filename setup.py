@@ -13,21 +13,18 @@ def make_required_install_packages():
     ]
 setuptools.setup(
     name="autoprototype",
-    version="0.1",
+    version="0.1.0",
     author="Ankan Ghosh",
     author_email = "ankan@ideas2it.com",
     description=" This is a module for Hyper-parameter tuning and rapid prototyping",
     long_description = long_descriptions,
     long_description_content_type = "text/markdown",
     url="https://github.com/Ideas2IT/auto-prototype.git",
-    install_requires=["tensorflow",
+    install_requires=["tensorflow==2.5.0",
                       "optuna",
-                      "typing",
-                      "keras",
-                      "sklearn"
                       ],
 
-    keywords=["RapidOpt",
+    keywords=["autoprototype","auto-prototype",
               "Hyper parameter Optimizations",
               "Optuna",
               ],
