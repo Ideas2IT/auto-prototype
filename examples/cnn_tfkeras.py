@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 from PIL import Image, ImageOps
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
+from autoprototype.tfkerasopt import KerasHPO
 
 labels = pd.read_csv('dog/labels.csv')
 print(labels.head())
@@ -82,7 +82,7 @@ train_generator = train_datagen.flow(X_train,Y_train,batch_size = 32)
 
 print("This is train gen", train_generator)
 
-from OptunaHPO.KerasHPO import KerasHPO
+
 hpo = KerasHPO(train_generator.x,train_generator.y,EPOCHS=10,classes=120,
                max_units_fcl=400, max_conv_filters=1000,
                arch="cnn",input_shape=(128,128,3),steps_per_epoch=10)

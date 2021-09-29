@@ -1,6 +1,6 @@
 import urllib
 from tensorflow.keras.datasets import mnist
-from OptunaHPO.KerasHPO import KerasHPO
+from autoprototype.tfkerasopt import KerasHPO
 import numpy as np
 import tensorflow as tf
 

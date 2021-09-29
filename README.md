@@ -132,4 +132,16 @@ Other optional arguments
 
 To run the CNN example [tf_keras/examples] and run :
 
+Download the data from :
+
+`https://www.kaggle.com/c/dog-breed-identification/data`
+
+Navigate to examples folder
+
+`cd examples`
+Make an empty directory called data. 
+`mkdir data`
+move the downloaded data into the `data` folder. Please check the path to data provided in the `cnn_tfkeras.py` script!
+
+Run:
 `python cnn_tfkeras.py`
