@@ -1,7 +1,7 @@
 # autoprototype
 
-This library is a designed for optimization of hyper-parameters in Deep Learning and Machine Learning Models. This model aims at
-giving the user the best set of hyper-parameters for your DL/ML models. 
+This library is designed for optimization of hyper-parameters in Deep Learning and Machine Learning Models. This module aims at
+giving the user the best set of hyper-parameters for their DL/ML models. 
 Along with suggesting the hyper-parameters, this module
 aims at returning to the user the best suggestive model framework/architecture based on the user input data. The user has 
 to just provide the dataset and the module will return :
@@ -64,7 +64,7 @@ Starting the prototyping process consists of just two line of code
 
 This would return to us, the best trail, the set of best parameters including the model and the best objective value based on which the optimization is done.
 
-To run the example navigate to [sklearn/examples] and use:
+To run the example navigate to [examples](https://github.com/Ideas2IT/auto-prototype/tree/master/examples) and use:
 
 `python iris.py`
 
@@ -98,7 +98,7 @@ User can also provide any other loss function based on requirement as follows:
     hpo = HyperparamOpt(x_train,y_train,EPOCHS=10,classes=CLASSES,loss="your_loss_function",n_ann_layers=number_of layers)
 
 
-To run the ANN example, navigate to [tf_keras/examples] and run :
+To run the ANN example, navigate to [examples](https://github.com/Ideas2IT/auto-prototype/tree/master/examples) and run :
 
 `python ann_tfkeras.py`
 
