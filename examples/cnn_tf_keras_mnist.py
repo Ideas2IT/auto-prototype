@@ -19,6 +19,7 @@ x_train = x_train/255
 x_test = x_test/255
 
 from autoprototype.tfkerasopt import KerasHPO
-hpo = KerasHPO(x_train,y_train,input_shape=(28,28,1),arch="cnn",EPOCHS=2,classes=10,steps_per_epoch=10)
+hpo = KerasHPO(x_train,y_train,input_shape=(28,28,1),arch="cnn",EPOCHS=2,classes=10,steps_per_epoch=10,
+               batch_size=28,loss="sparse_categorical_crossentropy")
 trial , params , val_loss = hpo.get_best_parameters(n_trials=5)
 

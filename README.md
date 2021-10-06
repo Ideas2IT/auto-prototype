@@ -138,10 +138,5 @@ Download the data from :
 
 Navigate to examples folder
 
-`cd examples`
-Make an empty directory called data. 
-`mkdir data`
-move the downloaded data into the `data` folder. Please check the path to data provided in the `cnn_tfkeras.py` script!
-
 Run:
-`python cnn_tfkeras.py`
+`python cnn_tf_keras_mnist.py`
