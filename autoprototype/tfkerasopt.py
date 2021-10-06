@@ -92,7 +92,7 @@ class KerasHPO():
             optimizer_name = trial.suggest_categorical("optimizer", [Adam, RMSprop, SGD])
         model.compile(
             loss=self.loss,
-            optimizer=optimizer_name(learnig_rate=lr),
+            optimizer=optimizer_name(learning_rate=lr),
             metrics=["accuracy"],
         )
 

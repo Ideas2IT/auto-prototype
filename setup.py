@@ -6,7 +6,7 @@ with open("README.md","r") as fh:
 
 setuptools.setup(
     name="autoprototype",
-    version="1.1.0",
+    version="1.2.1",
     author="Ankan Ghosh",
     author_email = "ankan@ideas2it.com",
     description=" This is a module for Hyper-parameter"
