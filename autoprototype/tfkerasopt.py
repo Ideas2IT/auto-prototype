@@ -1,6 +1,7 @@
 """tf keras optimization class"""
 import urllib
 import datetime
+import warnings
 from typing import Optional
 import optuna
 from optuna.integration import TFKerasPruningCallback
@@ -86,11 +87,12 @@ class KerasHPO():
 
         # We compile our model with a sampled learning rate.
         lr = trial.suggest_float("lr", 1e-5, 1e-1, log=True)
-        optimizer_name = trial.suggest_categorical("optimizer",
-                                                   [Adam, RMSprop, SGD])
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            optimizer_name = trial.suggest_categorical("optimizer", [Adam, RMSprop, SGD])
         model.compile(
             loss=self.loss,
-            optimizer=optimizer_name(lr=lr),
+            optimizer=optimizer_name(learnig_rate=lr),
             metrics=["accuracy"],
         )
 
@@ -150,10 +152,11 @@ class KerasHPO():
         model.add(tf.keras.layers.Dense(self.classes, activation="softmax"))
 
         # Compile model.
-        optimizer_name = trial.suggest_categorical("optimizer",
-                                                   [Adam, RMSprop, SGD])
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            optimizer_name = trial.suggest_categorical("optimizer", [Adam, RMSprop, SGD])
         model.compile(
-            optimizer=optimizer_name(lr=lr),
+            optimizer=optimizer_name(learning_rate=lr),
             loss="categorical_crossentropy",  #list of loss suggestions
             metrics=["accuracy"],
         )

@@ -52,11 +52,9 @@ class HyperparamOpt:
             alpha = trial.suggest_uniform("alpha", 0, 1)
             classifier_obj = sklearn.linear_model.Ridge(alpha=alpha)
         elif classifier_name == "Logistic":
-            penalty = trial.suggest_categorical(
-                "penalty", ["l1", "l2", "elasticnet", "none"])
-            max_iter = trial.suggest_int("max_iter", 50, 100)
+            max_iter = trial.suggest_int("max_iter", 1000, 1500)
             classifier_obj = sklearn.linear_model.LogisticRegression(
-                penalty=penalty, max_iter=max_iter)
+                max_iter=max_iter)
         elif classifier_name == "Lasso":
             alpha = trial.suggest_uniform("alpha", 0, 1)
             classifier_obj = sklearn.linear_model.Lasso(alpha=alpha)

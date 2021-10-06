@@ -6,10 +6,11 @@ with open("README.md","r") as fh:
 
 setuptools.setup(
     name="autoprototype",
-    version="1.1",
+    version="1.1.0",
     author="Ankan Ghosh",
     author_email = "ankan@ideas2it.com",
-    description=" This is a module for Hyper-parameter tuning and rapid prototyping",
+    description=" This is a module for Hyper-parameter"
+                " tuning and rapid prototyping",
     long_description = long_descriptions,
     long_description_content_type = "text/markdown",
     url="https://github.com/Ideas2IT/auto-prototype.git",
