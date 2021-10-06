@@ -22,6 +22,7 @@ class KerasHPO():
                  train,
                  target,
                  classes,
+                 batch_size: Optional[int] =8,
                  EPOCHS: Optional[int] = 5,
                  steps_per_epoch: Optional[int] = 216,
                  loss: Optional[str] = "sparse_categorical_crossentropy",
@@ -50,6 +51,7 @@ class KerasHPO():
         """
         self.EPOCHS = EPOCHS
         self.ds_train = train
+        self.batch_size = batch_size
         self.steps_per_epoch = steps_per_epoch
         self.loss = loss
         self.max_fully_conn_layers = max_fully_conn_layers
@@ -157,7 +159,7 @@ class KerasHPO():
             optimizer_name = trial.suggest_categorical("optimizer", [Adam, RMSprop, SGD])
         model.compile(
             optimizer=optimizer_name(learning_rate=lr),
-            loss="categorical_crossentropy",  #list of loss suggestions
+            loss=self.loss,  #list of loss suggestions
             metrics=["accuracy"],
         )
 
@@ -192,7 +194,7 @@ class KerasHPO():
         # Train model.
         history = model.fit(self.ds_train,
                             self.target,
-                            batch_size=8,
+                            batch_size=self.batch_size,
                             epochs=self.EPOCHS,
                             verbose=True,
                             validation_split=0.2)
@@ -233,7 +235,7 @@ class KerasHPO():
             epochs=self.EPOCHS,
             validation_split=0.1,
             steps_per_epoch=self.steps_per_epoch,
-            batch_size=8,
+            batch_size=self.batch_size,
         )
 
         return history.history[monitor][-1]
