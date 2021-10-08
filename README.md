@@ -21,9 +21,10 @@ Optuna is used for the optimization process using iterative trails. This module 
 suggests the user the model based on this Optuna trials. Optuna enables efficient hyperparameter optimization by adopting state-of-the-art
 algorithms for sampling hyper-parameters and pruning efficiently unpromising trials. 
 
-Some key features of Optuna, that we used are:
+Some key features of Optuna, that we used are
 
-1.[Lightweight, versatile, and platform agnostic architecture](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/001_first.html)
+
+1. [Lightweight, versatile, and platform agnostic architecture](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/001_first.html)
 
 2. [Pythonic search spaces](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/002_configurations.html)
 
@@ -39,9 +40,10 @@ Below is given the pip command.
 
 The usage or the API calls for each supported ML/DL libraries are shown in the next sections.
 
-#Supported Integrations Libraries
+# Supported Integrations Libraries
 
-##SKLearn
+## SKLearn
+
 At this point, the following models and their respective hyper-parameters are supported 
 
 a. Decision Tree
