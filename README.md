@@ -30,7 +30,7 @@ Some key features of Optuna, that we used are
 
 3. [Efficient Optimization Algorithms](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html)
 
-This module, includiong all examples, is entirely written on Python.
+This module, including all examples, is entirely written on Python.
 
 ## Installation Guide
 Users can use pip install to install the packages to start working on the prototyping.
@@ -132,11 +132,8 @@ Other optional arguments
 `max_conv_filters` : maximum filters in the convolution layers, default `256`
 
 
-To run the CNN example [tf_keras/examples] and run :
+To run the CNN example [examples](https://github.com/Ideas2IT/auto-prototype/tree/master/examples) and run :
 
-Download the data from :
-
-`https://www.kaggle.com/c/dog-breed-identification/data`
 
 Navigate to examples folder
 
