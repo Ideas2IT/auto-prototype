@@ -24,11 +24,13 @@ algorithms for sampling hyper-parameters and pruning efficiently unpromising tri
 Some key features of Optuna, that we used are
 
 
-1. [Lightweight, versatile, and platform agnostic architecture](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/001_first.html)
+1.[Efficient Optimization Algorithms](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html)
 
 2. [Pythonic search spaces](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/002_configurations.html)
 
-3. [Efficient Optimization Algorithms](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html)
+3. [Lightweight, versatile, and platform agnostic architecture](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/001_first.html)
+
+ 
 
 This module, including all examples, is entirely written on Python.
 
@@ -44,7 +46,7 @@ The usage or the API calls for each supported ML/DL libraries are shown in the n
 
 ## SKLearn
 
-At this point, the following models and their respective hyper-parameters are supported 
+The following models and their respective hyperparameters are included in the search space for the optimization. 
 
 a. Decision Tree
         
