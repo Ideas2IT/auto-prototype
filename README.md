@@ -24,7 +24,7 @@ algorithms for sampling hyper-parameters and pruning efficiently unpromising tri
 Some key features of Optuna, that we used are
 
 
-1.[Efficient Optimization Algorithms](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html)
+1. [Efficient Optimization Algorithms](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html)
 
 2. [Pythonic search spaces](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/002_configurations.html)
 
