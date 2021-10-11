@@ -134,10 +134,10 @@ Other optional arguments
 `max_conv_filters` : maximum filters in the convolution layers, default `256`
 
 
-To run the CNN example [examples](https://github.com/Ideas2IT/auto-prototype/tree/master/examples) and run :
+To run the CNN example 
 
 
-Navigate to examples folder
+Navigate to [examples](https://github.com/Ideas2IT/auto-prototype/tree/master/examples) and run :
 
 Run:
 `python cnn_tf_keras_mnist.py`
