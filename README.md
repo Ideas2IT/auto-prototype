@@ -1,9 +1,9 @@
 # autoprototype
 
-This library is designed for optimization of hyper-parameters in Deep Learning and Machine Learning Models. This module aims at
-giving the user the best set of hyper-parameters for their DL/ML models. 
-Along with suggesting the hyper-parameters, this module
-aims at returning to the user the best suggestive model framework/architecture based on the user input data. The user has 
+This library is designed for optimization of hyper-parameters in Deep Learning and Machine Learning Models. This module aims at 
+returning to the user the best suggestive model framework/architecture based on the user input data, alongside
+giving the user the best set of hyper-parameters for the suggested framework. 
+Along with suggesting the hyper-parameters,  The user has 
 to just provide the dataset and the module will return :
 
 
